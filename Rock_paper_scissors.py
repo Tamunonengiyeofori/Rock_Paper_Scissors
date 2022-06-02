@@ -11,21 +11,13 @@ while GAME_ON:
     for word in possible_choices:
         if word[0] == player_choice:
             player_choice = word
-            continue
-            
-            
+                    
     #Loop Until user's choice is in the list of possible choices
     if player_choice not in possible_choices:
         print('invalid choice')
-        player_choice = input("Please choose 'R' for ROCK, 'P' for PAPER or 'S' for SCISSOR: ").upper()
-        for word in possible_choices:
-            if word[0] == player_choice:
-                player_choice = word
+        continue
                 
-            
     computer_choice = choice(possible_choices)
-    
-    
     print(f"Player ({player_choice}): CPU ({computer_choice})")
 
     #compare player moves
